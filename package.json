@@ -1,0 +1,26 @@
+{
+  "name": "@pnk/mohawk",
+  "version": "1.0.0",
+  "description": "Style part of the PNK framework",
+  "main": "src/index.sass",
+  "scripts": {
+    "build": "rm -rf dist; npx sass src/index.sass dist/mohawk.min.css --style compressed --load-path node_modules --no-source-map",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "@absinsekt/pnk-mohawk"
+  },
+  "keywords": [
+    "sasss",
+    "style",
+    "pnk"
+  ],
+  "author": "absinsekt@protonmail.com",
+  "license": "ISC",
+  "devDependencies": {
+    "gridlex": "^2.7.1",
+    "normalize.css": "^8.0.1",
+    "dart-sass": "^1.25.0"
+  }
+}

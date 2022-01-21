@@ -1,0 +1,33 @@
+@use 'normalize.css/normalize.css'
+
+div, section, article, header, main, footer, button, input
+  box-sizing: border-box
+
+a
+  color: unset
+  text-decoration: none
+
+  img
+    display: inline-block
+    font-size: 0
+
+button, input
+  margin: 0
+  padding: 0
+  border: none
+  color: unset
+  background-color: unset
+
+ul
+  margin: 0
+  padding: 0
+  list-style: none
+
+div.inl > *,
+ul.inl > *
+  display: inline-block
+
+@each $h in h1 h2 h3 h4 h5 h6
+  #{$h}
+    margin: 0
+    padding: 0

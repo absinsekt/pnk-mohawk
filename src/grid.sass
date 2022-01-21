@@ -1,0 +1,40 @@
+@use 'gridlex/dist/gridlex.css'
+@use 'var'
+
+@each $k, $v in var.$breaks
+  .container-#{$k}
+    box-sizing: border-box
+    width: calc(100% - 4rem)
+    max-width: $v
+    margin: 0 auto
+    padding: 0 2rem
+
+@for $step from 1 through 20
+  .w-#{$step}
+    width: #{$step}rem
+
+  .h-#{$step}
+    height: #{$step}rem
+
+  .mv-#{$step}
+    margin-top: #{$step}rem
+    margin-bottom: #{$step}rem
+
+  .mh-#{$step}
+    margin-left: #{$step}rem
+    margin-right: #{$step}rem
+
+  .pv-#{$step}
+    padding-top: #{$step}rem
+    padding-bottom: #{$step}rem
+
+  .ph-#{$step}
+    padding-left: #{$step}rem
+    padding-right: #{$step}rem
+
+  @each $key, $direction in ('t': 'top', 'r': 'right', 'b': 'bottom', 'l': 'left')
+    .m#{$key}-#{$step}
+      margin-#{$direction}: #{$step}rem
+
+    .p#{$key}-#{$step}
+      padding-#{$direction}: #{$step}rem
